@@ -1,12 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import JobListItem from './JobListItem';
+import jobSelector from '../selectors/jobs';
 
-/* 
-    gets jobs from JSON file to state property
-    displays jobs using filters
-    if filters empty generate all jobs
-    if filters not empty generate jobs that have tags in filters
-*/
 class JobList extends React.Component {
 	constructor(props) {
 		super(props);
@@ -22,14 +18,21 @@ class JobList extends React.Component {
 	}
 
 	render() {
+		const jobs = jobSelector(this.state.jobs, this.props.filters);
 		return (
 			<ul>
-				<li>
-					<JobListItem />
-				</li>
+				{jobs.map((job) => (
+					<li key={job.id}>
+						<JobListItem {...job} />
+					</li>
+				))}
 			</ul>
 		);
 	}
 }
 
-export { JobList as default };
+const mapStateToProps = (state) => ({
+	filters: state.filters,
+});
+
+export default connect(mapStateToProps)(JobList);

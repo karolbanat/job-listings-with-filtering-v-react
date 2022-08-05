@@ -1,16 +1,17 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import FilterItem from './FilterItem';
 
-/* 
-    gets filters from store
-    generate item for each filter
-*/
 const FilterList = () => {
+	const filters = useSelector((store) => store.filters);
+
 	return (
 		<ul>
-			<li>
-				<FilterItem />
-			</li>
+			{filters.map((filter) => (
+				<li key={filter}>
+					<FilterItem filter={filter} />
+				</li>
+			))}
 		</ul>
 	);
 };

@@ -1,15 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { clearFilters } from '../actions/filters';
 import FilterList from './FilterList';
 
-/* 
-    shows only if filters are available
-    clear button dispatches remove all filters
-*/
 const Filters = () => {
+	const dispatch = useDispatch();
+
 	return (
 		<div>
 			<FilterList />
-			<button>Clear</button>
+			<button onClick={() => dispatch(clearFilters())}>Clear</button>
 		</div>
 	);
 };

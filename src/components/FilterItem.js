@@ -1,15 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { removeFilter } from '../actions/filters';
 import DeleteIcon from '../images/icon-remove.svg';
 
-/* 
-    inserts filter text
-    uses dispatch to remove filter from filters
-*/
-const FilterItem = () => {
+const FilterItem = (props) => {
+	const dispatch = useDispatch();
+
 	return (
 		<div>
-			<p>Text</p>
-			<button aria-label='Delete item'>
+			<p>{props.filter}</p>
+			<button aria-label={`Delete ${props.filter} filter`} onClick={() => dispatch(removeFilter(props.filter))}>
 				<img src={DeleteIcon} alt='' />
 			</button>
 		</div>

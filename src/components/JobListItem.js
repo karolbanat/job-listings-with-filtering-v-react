@@ -1,19 +1,19 @@
 import React from 'react';
-import CompanyLogo from '../images/account.svg'; // temporary icon
 import JobHeader from './JobHeader';
 import TagList from './TagList';
 
-/* 
-    gets item by id
-    displays job item conainer
-*/
-
-const JobListItem = () => {
+const JobListItem = (props) => {
 	return (
 		<article>
-			<img src={CompanyLogo} alt='' />
-			<JobHeader />
-			<TagList />
+			<img src={props.logo} alt='' />
+			<JobHeader
+				company={props.company}
+				isNew={props.new}
+				isFeatured={props.featured}
+				position={props.position}
+				bulletListItems={[props.postedAt, props.contract, props.location]}
+			/>
+			<TagList tags={[props.role, props.level, ...props.languages, ...props.tools]} />
 		</article>
 	);
 };

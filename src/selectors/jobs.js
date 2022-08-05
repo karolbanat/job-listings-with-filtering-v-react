@@ -1,5 +1,5 @@
-export default (jobs, filters) => {
-	if (!filters) return jobs;
+const jobSelector = (jobs, filters) => {
+	if (filters.length === 0) return jobs;
 
 	let filteredJobs = jobs;
 	filters.forEach((filter) => {
@@ -11,3 +11,5 @@ export default (jobs, filters) => {
 	});
 	return filteredJobs;
 };
+
+export default jobSelector;

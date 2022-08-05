@@ -1,21 +1,16 @@
 import React from 'react';
 import BulletList from './BulletList';
 
-/* 
-    gets data from props
-    renders company name
-        if company has new -> displays 'new' span
-        if company has featured -> displays 'featured' span
-    displays job name
-*/
-const JobHeader = () => {
+const JobHeader = (props) => {
 	return (
 		<header>
 			<p>
-				Photosnap <span>New</span> <span>Featured</span>
+				{props.company}
+				{props.isNew ? <span>New</span> : null}
+				{props.isFeatured ? <span>Featured</span> : null}
 			</p>
-			<h2>Senior Frontend Developer</h2>
-			<BulletList />
+			<h2>{props.position}</h2>
+			<BulletList listItems={props.bulletListItems} />
 		</header>
 	);
 };

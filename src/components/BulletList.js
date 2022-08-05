@@ -1,15 +1,11 @@
 import React from 'react';
 
-/* 
-    gets data from props
-    generates list for additional info (time_added, contract, location)
-*/
-const BulletList = () => {
+const BulletList = (props) => {
 	return (
 		<ul>
-			<li>1d ago</li>
-			<li>Full time</li>
-			<li>USA only</li>
+			{props.listItems.map((item) => (
+				<li key={item}>{item}</li>
+			))}
 		</ul>
 	);
 };
