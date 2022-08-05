@@ -1,0 +1,17 @@
+.featured {
+	display: inline-block;
+	padding: var(--spacing-em-300) var(--spacing-em-350);
+	margin-left: var(--spacing-em-400);
+	font-size: var(--fz-300);
+	color: var(--clr-neutral-100);
+	background-color: var(--bg-color);
+	border-radius: var(--borr-900);
+
+	&--new {
+		--bg-color: var(--clr-primary-400);
+	}
+
+	&--featured {
+		--bg-color: var(--clr-primary-700);
+	}
+}

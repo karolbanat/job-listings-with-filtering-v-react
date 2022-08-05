@@ -1,0 +1,36 @@
+@use '../base/functions';
+
+.button {
+	--text: var(--clr-primary-400);
+	--hover: var(--clr-primary-400);
+	--padding: var(--spacing-em-300, 0.25em);
+	$bg-color: functions.get-color(primary, 400);
+
+	padding: var(--padding);
+	font-weight: var(--fw-700);
+	line-height: 1;
+	color: var(--text);
+	background-color: fade-out($color: $bg-color, $amount: 0.9);
+	border: none;
+	border-radius: var(--borr-200);
+	cursor: pointer;
+	transition: background-color 0.35s ease, color 0.35s ease;
+
+	&:hover,
+	&:focus-visible {
+		--text: var(--clr-neutral-100);
+		background-color: var(--hover);
+	}
+
+	&--link {
+		--text: var(--clr-neutral-400);
+		background: none;
+
+		&:hover,
+		&:focus-visible {
+			--text: var(--hover);
+			text-decoration: underline;
+			background: none;
+		}
+	}
+}

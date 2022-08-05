@@ -20,7 +20,7 @@ class JobList extends React.Component {
 	render() {
 		const jobs = jobSelector(this.state.jobs, this.props.filters);
 		return (
-			<ul>
+			<ul className='jobs'>
 				{jobs.map((job) => (
 					<li key={job.id}>
 						<JobListItem {...job} />

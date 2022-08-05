@@ -3,13 +3,15 @@ import BulletList from './BulletList';
 
 const JobHeader = (props) => {
 	return (
-		<header>
-			<p>
+		<header className='flow' style={{ '--flow-spacer': '.5em' }}>
+			<p className='job-item__company'>
 				{props.company}
-				{props.isNew ? <span>New</span> : null}
-				{props.isFeatured ? <span>Featured</span> : null}
+				{props.isNew ? <span className='featured featured--new'>New!</span> : null}
+				{props.isFeatured ? <span className='featured featured--featured'>Featured</span> : null}
 			</p>
-			<h2>{props.position}</h2>
+			<h2 className='job-item__position'>
+				<a href='/'>{props.position}</a>
+			</h2>
 			<BulletList listItems={props.bulletListItems} />
 		</header>
 	);

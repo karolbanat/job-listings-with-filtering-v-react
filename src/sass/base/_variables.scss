@@ -11,6 +11,7 @@ $colors: (
 	),
 	neutral: (
 		100: hsl(0 0% 100%),
+		200: hsl(180, 10%, 74%),
 		300: hsl(180 52% 96%),
 		400: hsl(180 8% 52%),
 	),
@@ -25,11 +26,13 @@ $font-sizes: (
 		700: 1.5rem,
 	),
 	medium: (
-		300: 1 4rem,
+		300: 1.4rem,
 		400: 1.6rem,
 		500: 1.8rem,
-		600: 1.8rem,
 		700: 2.2rem,
+	),
+	large: (
+		600: 1.8rem,
 	),
 );
 // 1.4rem -> 1.4rem     new/featured span
@@ -52,6 +55,18 @@ $border-radius: (
 );
 
 $spacings: (
-	em: (),
-	rem: (),
+	em: (
+		300: 0.5em,
+		350: 0.75em,
+		400: 1em,
+		450: 1.25em,
+		600: 2em,
+		700: 2.5em,
+	),
+	rem: (
+		300: 1.6rem,
+		400: 2.4rem,
+		500: 3.2rem,
+		600: 4rem,
+	),
 );

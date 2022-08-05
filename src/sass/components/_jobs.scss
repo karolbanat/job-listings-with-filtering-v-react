@@ -1,0 +1,12 @@
+@use '../base/mixins';
+
+.jobs {
+	--gap: var(--spacing-rem-600);
+    
+	display: grid;
+	gap: var(--gap);
+
+	@include mixins.mq(medium) {
+		--gap: var(--spacing-rem-400);
+	}
+}

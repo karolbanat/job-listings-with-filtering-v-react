@@ -8,8 +8,10 @@ const Main = () => {
 
 	return (
 		<main>
-			{filters.length > 0 ? <Filters /> : null}
-			<JobList />
+			<div className='flow container' style={{ '--flow-spacer': '2.5em' }}>
+				{filters.length > 0 ? <Filters /> : null}
+				<JobList />
+			</div>
 		</main>
 	);
 };

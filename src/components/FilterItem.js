@@ -7,9 +7,12 @@ const FilterItem = (props) => {
 	const dispatch = useDispatch();
 
 	return (
-		<div>
-			<p>{props.filter}</p>
-			<button aria-label={`Delete ${props.filter} filter`} onClick={() => dispatch(removeFilter(props.filter))}>
+		<div className='filter'>
+			<p className='filter__text'>{props.filter}</p>
+			<button
+				aria-label={`Delete ${props.filter} filter`}
+				onClick={() => dispatch(removeFilter(props.filter))}
+				className='filter__remove-button'>
 				<img src={DeleteIcon} alt='' />
 			</button>
 		</div>

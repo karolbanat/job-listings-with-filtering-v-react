@@ -1,0 +1,33 @@
+@use '../base/functions';
+
+.filter {
+	$bg-color: functions.get-color(primary, 400);
+
+	display: flex;
+	padding: 0;
+	font-weight: var(--fw-700);
+	color: var(--clr-primary-400);
+	background-color: fade-out($color: $bg-color, $amount: 0.9);
+	border-radius: var(--borr-200);
+	overflow: hidden;
+
+	&__text {
+		margin: var(--spacing-em-300);
+	}
+
+	&__remove-button {
+		--bg-button: var(--clr-primary-400);
+		display: inline-grid;
+		place-content: center;
+		width: 3.2rem;
+		background-color: var(--bg-button);
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.35s ease;
+
+		&:hover,
+		&:focus-visible {
+			--bg-button: var(--clr-primary-700);
+		}
+	}
+}

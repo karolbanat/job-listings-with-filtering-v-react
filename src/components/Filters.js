@@ -7,9 +7,11 @@ const Filters = () => {
 	const dispatch = useDispatch();
 
 	return (
-		<div>
+		<div className='filters'>
 			<FilterList />
-			<button onClick={() => dispatch(clearFilters())}>Clear</button>
+			<button onClick={() => dispatch(clearFilters())} className='button button--link'>
+				Clear
+			</button>
 		</div>
 	);
 };

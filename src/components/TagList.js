@@ -6,10 +6,12 @@ const TagList = (props) => {
 	const dispatch = useDispatch();
 
 	return (
-		<ul>
+		<ul className='job-item__tags | flex-wrap'>
 			{props.tags.map((tag) => (
 				<li key={tag}>
-					<button onClick={() => dispatch(addFilter(tag))}>{tag}</button>
+					<button onClick={() => dispatch(addFilter(tag))} className='button'>
+						{tag}
+					</button>
 				</li>
 			))}
 		</ul>

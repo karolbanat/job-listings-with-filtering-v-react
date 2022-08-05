@@ -1,0 +1,74 @@
+@use '../base/mixins';
+
+.job-item {
+	--padding-block: var(--spacing-rem-500);
+	--padding-inline: clamp(var(--spacing-rem-400), 4vw, var(--spacing-rem-600));
+	--gap: var(--spacing-rem-300);
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
+	padding: var(--padding-block) var(--padding-inline);
+	line-height: 1.1;
+	background-color: var(--clr-neutral-100);
+	border-radius: var(--borr-300);
+
+	&__company {
+		font-size: var(--fz-500);
+		font-weight: var(--fw-700);
+		color: var(--clr-primary-400);
+	}
+
+	&__position {
+		--text: var(--clr-primary-700);
+
+		font-size: var(--fz-700);
+		color: var(--text);
+
+		& > a {
+			text-decoration: none;
+			color: var(--text);
+			cursor: pointer;
+			transition: color 0.35s ease;
+
+			&:hover,
+			&:focus {
+				--text: var(--clr-primary-400);
+			}
+		}
+	}
+
+	@include mixins.mq(medium) {
+		--gap: var(--spacing-rem-400);
+
+		flex-direction: row;
+		align-items: center;
+
+		&__tags {
+			margin-left: auto;
+
+			& > * {
+				margin-left: auto;
+			}
+		}
+	}
+
+	@include mixins.max-mq(medium) {
+		position: relative;
+
+		// for smaller screens, company logo positioned absolutely
+		&__avatar {
+			position: absolute;
+			top: 0;
+			left: var(--padding-inline);
+			transform: translateY(-50%);
+			width: 4.8rem;
+		}
+
+		// separator line on smaller screens
+		&__tags {
+			padding-top: var(--gap);
+			border-top: 1px solid hsl(180, 10%, 74%);
+		}
+	}
+}

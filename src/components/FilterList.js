@@ -6,7 +6,7 @@ const FilterList = () => {
 	const filters = useSelector((store) => store.filters);
 
 	return (
-		<ul>
+		<ul className='filters__list | flex-wrap '>
 			{filters.map((filter) => (
 				<li key={filter}>
 					<FilterItem filter={filter} />

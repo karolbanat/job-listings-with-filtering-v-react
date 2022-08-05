@@ -2,7 +2,7 @@ import React from 'react';
 
 const BulletList = (props) => {
 	return (
-		<ul>
+		<ul className='bullet-list'>
 			{props.listItems.map((item) => (
 				<li key={item}>{item}</li>
 			))}
