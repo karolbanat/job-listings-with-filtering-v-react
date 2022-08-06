@@ -38,6 +38,22 @@
 		}
 	}
 
+	&--featured {
+		position: relative;
+
+		// line on the left for featured jobs
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0.5rem;
+			background-color: var(--clr-primary-400);
+			border-radius: var(--borr-300) 0 0 var(--borr-300);
+		}
+	}
+
 	@include mixins.mq(medium) {
 		--gap: var(--spacing-rem-400);
 
