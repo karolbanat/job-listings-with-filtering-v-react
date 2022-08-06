@@ -8,6 +8,7 @@ const Main = () => {
 
 	return (
 		<main>
+			<h1 className='visually-hidden'>Find job of your dreams</h1>
 			<div className='flow container' style={{ '--flow-spacer': '2.5em' }}>
 				{filters.length > 0 ? <Filters /> : null}
 				<JobList />

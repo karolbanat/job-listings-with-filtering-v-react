@@ -4,7 +4,7 @@ import TagList from './TagList';
 
 const JobListItem = (props) => {
 	return (
-		<article className='job-item'>
+		<article className={`job-item ${props.featured ? 'job-item--featured' : ''}`}>
 			<img src={props.logo} alt='' className='job-item__avatar' />
 			<JobHeader
 				company={props.company}
