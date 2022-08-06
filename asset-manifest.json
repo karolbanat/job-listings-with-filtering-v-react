@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/job-listings-with-filtering-v-react/static/css/main.f689ad72.css",
-    "main.js": "/job-listings-with-filtering-v-react/static/js/main.e8933e6c.js",
+    "main.css": "/job-listings-with-filtering-v-react/static/css/main.4ba57484.css",
+    "main.js": "/job-listings-with-filtering-v-react/static/js/main.e3b87000.js",
     "static/js/787.ca9b9a51.chunk.js": "/job-listings-with-filtering-v-react/static/js/787.ca9b9a51.chunk.js",
     "static/media/bg-header-desktop.svg": "/job-listings-with-filtering-v-react/static/media/bg-header-desktop.752d0faf14c00c6fb55f.svg",
     "index.html": "/job-listings-with-filtering-v-react/index.html",
     "static/media/bg-header-mobile.svg": "/job-listings-with-filtering-v-react/static/media/bg-header-mobile.b7750a0c3e0c016763b9.svg",
     "static/media/icon-remove.svg": "/job-listings-with-filtering-v-react/static/media/icon-remove.70c075ce001e5ccae7c68a570c4b7bc0.svg",
-    "main.f689ad72.css.map": "/job-listings-with-filtering-v-react/static/css/main.f689ad72.css.map",
-    "main.e8933e6c.js.map": "/job-listings-with-filtering-v-react/static/js/main.e8933e6c.js.map",
+    "main.4ba57484.css.map": "/job-listings-with-filtering-v-react/static/css/main.4ba57484.css.map",
+    "main.e3b87000.js.map": "/job-listings-with-filtering-v-react/static/js/main.e3b87000.js.map",
     "787.ca9b9a51.chunk.js.map": "/job-listings-with-filtering-v-react/static/js/787.ca9b9a51.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f689ad72.css",
-    "static/js/main.e8933e6c.js"
+    "static/css/main.4ba57484.css",
+    "static/js/main.e3b87000.js"
   ]
 }
